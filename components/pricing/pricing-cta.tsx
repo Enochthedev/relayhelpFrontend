@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { MessageSquare, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function PricingCta() {
   return (
@@ -150,9 +151,13 @@ export default function PricingCta() {
                     </motion.li>
                   </ul>
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                    <Button variant="outline" className="w-full border-[#ED1C24] text-[#ED1C24] hover:bg-[#ED1C24]/5">
-                      Contact Sales
-                    </Button>
+                    <Link
+                      href="/contact"
+                      className="w-full">
+                      <Button variant="outline" className="w-full border-[#ED1C24] text-[#ED1C24] hover:bg-[#ED1C24]/5">
+                        Contact Sales
+                      </Button>
+                    </Link>
                   </motion.div>
                 </div>
               </motion.div>

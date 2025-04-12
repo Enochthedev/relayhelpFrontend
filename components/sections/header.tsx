@@ -121,7 +121,13 @@ export default function Header() {
         >
           Log In
         </Link>
-        <Button className="bg-[#E14B32] hover:bg-[#E14B32]/90 text-white">Sign Up</Button>
+        <Link href="/waitlist" onClick={() => setMobileMenuOpen(false)}>
+          <Button
+            className="w-full bg-[#E14B32] hover:bg-[#E14B32]/90 text-white py-2"
+          >
+            Sign Up
+          </Button>
+        </Link>
       </div>
 
       {/* Mobile menu button */}
@@ -159,7 +165,7 @@ export default function Header() {
                 How It Works
               </Link>
               <Link
-                href="#pricing"
+                href="/pricing"
                 className="text-lg font-medium text-[#111827] hover:text-[#ED1C24] py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -168,18 +174,22 @@ export default function Header() {
             </nav>
             <div className="flex flex-col space-y-3">
               <Link
-                href="#"
+                href="/waitlist"
                 className="w-full text-center py-2 rounded-md border border-[#111827] text-[#111827] font-medium hover:bg-[#111827] hover:text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Log In
               </Link>
+              <Link
+                href="/waitlist"
+                onClick={() => setMobileMenuOpen(false)}>
               <Button
                 className="w-full bg-[#E14B32] hover:bg-[#E14B32]/90 text-white py-2"
-                onClick={() => setMobileMenuOpen(false)}
+                
               >
                 Sign Up
               </Button>
+              </Link>
             </div>
           </motion.div>
         )}
