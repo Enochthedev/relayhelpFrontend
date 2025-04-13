@@ -2,12 +2,13 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { usePathname, useSearchParams } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
-export function PageTransition({ children }: { children: React.ReactNode }) {
+// Create a client component that safely uses the hooks
+function PageTransitionContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const [isLoading, setIsLoading] = useState(false)
@@ -103,5 +104,14 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
 
       {children}
     </>
+  )
+}
+
+// Export a wrapper component that uses Suspense
+export function PageTransition({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense fallback={null}>
+      <PageTransitionContent>{children}</PageTransitionContent>
+    </Suspense>
   )
 }

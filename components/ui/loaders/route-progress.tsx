@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { usePathname, useSearchParams } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 
-export function RouteProgress() {
+// Create a client component that safely uses the hooks
+function RouteProgressContent() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const [isLoading, setIsLoading] = useState(false)
@@ -62,5 +63,14 @@ export function RouteProgress() {
         </motion.div>
       )}
     </AnimatePresence>
+  )
+}
+
+// Export a wrapper component that uses Suspense
+export function RouteProgress() {
+  return (
+    <Suspense fallback={null}>
+      <RouteProgressContent />
+    </Suspense>
   )
 }

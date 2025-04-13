@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Cta() {
   return (
@@ -11,15 +12,19 @@ export default function Cta() {
           Join thousands of companies using RelayHelp to provide exceptional support through Discord.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="bg-[#E14B32] hover:bg-[#E14B32]/90 text-white border-0 py-3 md:py-auto">
-            Start for Free
-          </Button>
-          <Button
-            variant="outline"
-            className="border-[#E14B32] text-[#E14B32] bg-white hover:bg-white hover:text-[#E14B32] hover:border-[#E14B32]/80 py-3 md:py-auto"
-          >
-            Schedule a Demo
-          </Button>
+          <Link href="/pricing">
+            <Button className="bg-[#E14B32] hover:bg-[#E14B32]/90 text-white border-0 py-3 md:py-auto">
+              Start for Free
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button
+              variant="outline"
+              className="border-[#E14B32] text-[#E14B32] bg-white hover:bg-white hover:text-[#E14B32]/80 hover:border-[#E14B32]/80 py-3 md:py-auto"
+            >
+              Schedule a Demo
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

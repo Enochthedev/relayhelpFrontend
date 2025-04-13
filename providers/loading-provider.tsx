@@ -3,6 +3,7 @@
 import { createContext, useContext, useState, type ReactNode } from "react"
 import { PageLoader } from "@/components/ui/loaders/page-loader"
 import { RouteProgress } from "@/components/ui/loaders/route-progress"
+import { Suspense } from "react"
 
 type LoadingContextType = {
   showLoader: () => void
@@ -24,7 +25,9 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
 
   return (
     <LoadingContext.Provider value={{ showLoader, hideLoader, isLoading }}>
-      <RouteProgress />
+      <Suspense fallback={null}>
+        <RouteProgress />
+      </Suspense>
       <PageLoader isLoading={isLoading} />
       {children}
     </LoadingContext.Provider>

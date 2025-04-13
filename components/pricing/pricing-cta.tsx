@@ -74,18 +74,22 @@ export default function PricingCta() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button className="bg-[#ED1C24] hover:bg-[#ED1C24]/90 text-white">Start Free</Button>
+                    <Link href="/pricing">
+                      <Button className="bg-[#ED1C24] hover:bg-[#ED1C24]/90 text-white">Start Free</Button>
+                    </Link>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button variant="outline" className="border-gray-300 text-gray-700 flex items-center group">
-                      Schedule a Demo
-                      <motion.div
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
-                      >
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:ml-3 transition-all" />
-                      </motion.div>
-                    </Button>
+                    <Link href="/contact">
+                      <Button variant="outline" className="border-gray-300 text-gray-700 flex items-center group">
+                        Schedule a Demo
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
+                        >
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:ml-3 transition-all" />
+                        </motion.div>
+                      </Button>
+                    </Link>
                   </motion.div>
                 </div>
               </motion.div>
@@ -151,13 +155,9 @@ export default function PricingCta() {
                     </motion.li>
                   </ul>
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                    <Link
-                      href="/contact"
-                      className="w-full">
-                      <Button variant="outline" className="w-full border-[#ED1C24] text-[#ED1C24] hover:bg-[#ED1C24]/5">
-                        Contact Sales
-                      </Button>
-                    </Link>
+                    <Button variant="outline" className="w-full border-[#ED1C24] text-[#ED1C24] hover:bg-[#ED1C24]/5">
+                      Contact Sales
+                    </Button>
                   </motion.div>
                 </div>
               </motion.div>

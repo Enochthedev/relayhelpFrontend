@@ -226,12 +226,12 @@ export default function BuiltForStartups() {
                   </p>
                   <p className="text-white/70 text-sm">
                     Our team was already on Discord all day. We were paying for an expensive help desk no one liked
-                    using. So I built RelayHelp—support that lives where your team already works, without the
+                    using. So we built RelayHelp—support that lives where your team already works, without the
                     complexity or cost.
                   </p>
                   <div className="mt-3 flex items-center">
                     <div className="h-px bg-white/20 flex-grow mr-3"></div>
-                    <span className="text-white/60 text-sm">wave, Founder</span>
+                    <span className="text-white/60 text-sm">Alex Chen, Founder</span>
                   </div>
                 </div>
               </div>

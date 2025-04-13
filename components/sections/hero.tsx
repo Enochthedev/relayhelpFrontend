@@ -6,6 +6,7 @@ import { FeatureCard } from "@/components/ui/feature-card"
 import { NotificationIcon } from "@/components/ui/notification-icon"
 import { IconSlider } from "@/components/ui/icon-slider"
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 export default function Hero() {
   const [isMobile, setIsMobile] = useState(false)
@@ -48,16 +49,21 @@ export default function Hero() {
             <p className="text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-xl mx-auto md:mx-0">
               RelayHelp connects your app's widget to real-time agent support in Discord.
             </p>
+            {/* Update the CTA buttons in the hero section */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button className="bg-[#E14B32] hover:bg-[#E14B32]/90 text-white border-0 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
-                Start for Free
-              </Button>
-              <Button
-                variant="outline"
-                className="border-[#ED1C24] text-[#ED1C24] bg-white hover:bg-white hover:text-[#ED1C24]/80 hover:border-[#ED1C24]/80 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
-              >
-                See How It Works
-              </Button>
+              <Link href="/pricing">
+                <Button className="bg-[#E14B32] hover:bg-[#E14B32]/90 text-white border-0 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
+                  Start for Free
+                </Button>
+              </Link>
+              <Link href="/how-it-works">
+                <Button
+                  variant="outline"
+                  className="border-[#ED1C24] text-[#ED1C24] bg-white hover:bg-white hover:text-[#ED1C24]/80 hover:border-[#ED1C24]/80 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+                >
+                  See How It Works
+                </Button>
+              </Link>
             </div>
 
             {/* RelayHelp Icon as Solution Bridge - Only on desktop */}

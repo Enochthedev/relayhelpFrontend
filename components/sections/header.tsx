@@ -92,7 +92,7 @@ export default function Header() {
             />
             <path d="M1435.55,442.35v154.32h25.27v-154.32h-25.27Z" fill="#ED1C24" className="hidden md:block" />
             <path
-              d="M1550.55,474.21c-16.28,0-30.19,7.07-40.68,23.33h-.43v-19.91h-24.83v166.15h25.25v-65.08c7.29,11.77,20.34,21.62,38.97,21.62,29.12,0,54.37-24.21,54.37-63.6,0-34.89-20.55-62.51-52.66-62.51Zm-7.07,102.12c-19.27,0-34.03-16.04-34.03-38.97s14.76-39.18,34.03-39.18,33.39,16.49,33.39,39.18-13.91,38.97-33.39,38.97Z"
+              d="M1550.55,474.21c-16.28,0-30.19,7.07-40.68,23.33h-.43v-19.91h-24.83v166.15h25.25v-65.08c7.29,11.77,20.34,21.62,38.97,21.62,29.12,0,54.37-24.21,54.37-63.6,0-34.89-20.55-62.51-52.66-62.51Zm-7.07,102.12c-19.27,0-34.03-16.04-34.03-38.97s14.76-39.18,34.03-39.18,33.39,16.49,33.39,38.97-13.91,38.97-33.39,38.97Z"
               fill="#ED1C24"
               className="hidden md:block"
             />
@@ -102,14 +102,17 @@ export default function Header() {
 
       {/* Desktop navigation */}
       <nav className="hidden md:flex gap-6">
-        <Link href="#features" className="text-sm font-medium text-[#111827] hover:text-[#ED1C24]">
+        <Link href="/features" className="text-sm font-medium text-[#111827] hover:text-[#ED1C24]">
           Features
         </Link>
-        <Link href="#how-it-works" className="text-sm font-medium text-[#111827] hover:text-[#ED1C24]">
+        <Link href="/how-it-works" className="text-sm font-medium text-[#111827] hover:text-[#ED1C24]">
           How It Works
         </Link>
         <Link href="/pricing" className="text-sm font-medium text-[#111827] hover:text-[#ED1C24]">
           Pricing
+        </Link>
+        <Link href="/blog" className="text-sm font-medium text-[#111827] hover:text-[#ED1C24]">
+          Blog
         </Link>
       </nav>
 
@@ -121,13 +124,7 @@ export default function Header() {
         >
           Log In
         </Link>
-        <Link href="/waitlist" onClick={() => setMobileMenuOpen(false)}>
-          <Button
-            className="w-full bg-[#E14B32] hover:bg-[#E14B32]/90 text-white py-2"
-          >
-            Sign Up
-          </Button>
-        </Link>
+        <Button className="bg-[#E14B32] hover:bg-[#E14B32]/90 text-white">Sign Up</Button>
       </div>
 
       {/* Mobile menu button */}
@@ -151,14 +148,14 @@ export default function Header() {
           >
             <nav className="flex flex-col space-y-4 mb-6">
               <Link
-                href="#features"
+                href="/features"
                 className="text-lg font-medium text-[#111827] hover:text-[#ED1C24] py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Features
               </Link>
               <Link
-                href="#how-it-works"
+                href="/how-it-works"
                 className="text-lg font-medium text-[#111827] hover:text-[#ED1C24] py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -171,25 +168,28 @@ export default function Header() {
               >
                 Pricing
               </Link>
+              <Link
+                href="/blog"
+                className="text-lg font-medium text-[#111827] hover:text-[#ED1C24] py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
+              </Link>
             </nav>
             <div className="flex flex-col space-y-3">
               <Link
-                href="/waitlist"
+                href="#"
                 className="w-full text-center py-2 rounded-md border border-[#111827] text-[#111827] font-medium hover:bg-[#111827] hover:text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Log In
               </Link>
-              <Link
-                href="/waitlist"
-                onClick={() => setMobileMenuOpen(false)}>
               <Button
                 className="w-full bg-[#E14B32] hover:bg-[#E14B32]/90 text-white py-2"
-                
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Sign Up
               </Button>
-              </Link>
             </div>
           </motion.div>
         )}

@@ -36,8 +36,13 @@ export default function Footer() {
             <h3 className="font-bold mb-4">Product</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-white/70 hover:text-white">
+                <Link href="/features" className="text-white/70 hover:text-white">
                   Features
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-it-works" className="text-white/70 hover:text-white">
+                  How It Works
                 </Link>
               </li>
               <li>
@@ -61,13 +66,13 @@ export default function Footer() {
             <h3 className="font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/docs" className="text-white/70 hover:text-white">
-                  Documentation
+                <Link href="/blog" className="text-white/70 hover:text-white">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-white/70 hover:text-white">
-                  Blog
+                <Link href="/docs" className="text-white/70 hover:text-white">
+                  Docs
                 </Link>
               </li>
               <li>
@@ -91,6 +96,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/contact" className="text-white/70 hover:text-white">
+                  Contact
+                </Link>
+              </li>
+              <li>
                 <Link href="/terms-of-service" className="text-white/70 hover:text-white">
                   Terms of Service
                 </Link>
@@ -98,11 +108,6 @@ export default function Footer() {
               <li>
                 <Link href="/privacy-policy" className="text-white/70 hover:text-white">
                   Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-white/70 hover:text-white">
-                  Contact
                 </Link>
               </li>
             </ul>

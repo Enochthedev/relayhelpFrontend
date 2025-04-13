@@ -82,9 +82,9 @@ export default function AboutHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#111827] mb-4 md:mb-6"
           >
-            Built by a{" "}
+            Built by{" "}
             <span className="text-[#ED1C24] relative inline-block">
-               Founder
+              founders
               <motion.span
                 className="absolute -bottom-2 left-0 w-full h-1 bg-[#ED1C24]"
                 initial={{ width: 0 }}
@@ -95,7 +95,7 @@ export default function AboutHero() {
             , <br className="hidden sm:block" />
             for{" "}
             <span className="text-[#ED1C24] relative inline-block">
-              Founders
+              founders
               <motion.span
                 className="absolute -bottom-2 left-0 w-full h-1 bg-[#ED1C24]"
                 initial={{ width: 0 }}
@@ -122,7 +122,7 @@ export default function AboutHero() {
             className="inline-flex items-center px-4 py-2 rounded-full bg-[#ED1C24]/10 text-[#ED1C24] text-sm font-medium"
           >
             <span className="mr-2">🚀</span>
-            <span>Launched April 2025</span>
+            <span>Launched April 2024</span>
           </motion.div>
         </div>
         <motion.div
